@@ -16,33 +16,36 @@ public final class R {
     }
     public static final class drawable {
         public static final int back=0x7f020000;
-        public static final int begin=0x7f020001;
-        public static final int beijing=0x7f020002;
-        public static final int bg=0x7f020003;
-        public static final int box=0x7f020004;
-        public static final int box_at_goal=0x7f020005;
-        public static final int down=0x7f020006;
-        public static final int exit=0x7f020007;
-        public static final int goal=0x7f020008;
-        public static final int gugong=0x7f020009;
-        public static final int ic_launcher=0x7f02000a;
-        public static final int left=0x7f02000b;
-        public static final int man=0x7f02000c;
-        public static final int man2=0x7f02000d;
-        public static final int music=0x7f02000e;
-        public static final int right=0x7f02000f;
-        public static final int road=0x7f020010;
-        public static final int treasure=0x7f020011;
-        public static final int up=0x7f020012;
-        public static final int wall=0x7f020013;
+        public static final int base=0x7f020001;
+        public static final int begin=0x7f020002;
+        public static final int begin1=0x7f020003;
+        public static final int beijing=0x7f020004;
+        public static final int bg=0x7f020005;
+        public static final int box=0x7f020006;
+        public static final int box_at_goal=0x7f020007;
+        public static final int down=0x7f020008;
+        public static final int exit=0x7f020009;
+        public static final int exit2=0x7f02000a;
+        public static final int fudai=0x7f02000b;
+        public static final int goal=0x7f02000c;
+        public static final int gugong=0x7f02000d;
+        public static final int ic_launcher=0x7f02000e;
+        public static final int left=0x7f02000f;
+        public static final int man=0x7f020010;
+        public static final int man2=0x7f020011;
+        public static final int music=0x7f020012;
+        public static final int right=0x7f020013;
+        public static final int road=0x7f020014;
+        public static final int treasure=0x7f020015;
+        public static final int up=0x7f020016;
+        public static final int wall=0x7f020017;
     }
     public static final class id {
-        public static final int action_settings=0x7f090005;
-        public static final int begin=0x7f090004;
-        public static final int exit=0x7f090003;
+        public static final int action_settings=0x7f090004;
+        public static final int begin=0x7f090003;
+        public static final int exit=0x7f090002;
         public static final int textView=0x7f090000;
-        public static final int textView2=0x7f090001;
-        public static final int tv=0x7f090002;
+        public static final int tv=0x7f090001;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

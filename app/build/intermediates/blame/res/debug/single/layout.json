@@ -4,23 +4,15 @@
         "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\layout\\begin.xml",
-        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\layout\\begin.xml"
-    },
-    {
-        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\layout\\begin.xml",
-        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\layout\\begin.xml"
+        "merged": "H:\\code\\test\\PushBoxTest8\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "H:\\code\\test\\PushBoxTest8\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\layout\\begin.xml",
         "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\layout\\begin.xml"
     },
     {
-        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "H:\\code\\test\\PushBoxTest8\\app\\build\\intermediates\\res\\merged\\debug\\layout\\begin.xml",
+        "source": "H:\\code\\test\\PushBoxTest8\\app\\src\\main\\res\\layout\\begin.xml"
     }
 ]

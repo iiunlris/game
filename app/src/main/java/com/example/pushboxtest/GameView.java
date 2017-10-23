@@ -43,6 +43,7 @@ public class GameView extends View {
     public final int RIGHT = 11;
     public final int MUSIC = 12;
     public final int TREASURE = 13;
+    public final int FUDAI = 14;
 
     public Bitmap pic[] = null;
     private int[][] map = null;
@@ -56,6 +57,82 @@ public class GameView extends View {
     public int column = 0;
     private int nowRound = 0;
     private final int AddParameter = 20;
+
+    String question[] = {
+            "坤宁宫每天杀猪是真的吗",
+            "紫禁城狮子逗弄小狮子的是雄狮子还是雌狮子",
+            "紫禁城是哪个皇帝建的",
+            "故宫里的大铜缸是做什么用的",
+            "题写乾清宫的正大光明匾的是谁",
+            "紫禁城里有路灯吗"
+    };
+    String ansA[] = {
+        "真的",
+            "雄狮子",
+            "朱棣",
+            "防火",
+            "康熙皇帝玄烨",
+            "有"
+    };
+    String ansB[] = {
+            "假的",
+            "雌狮子",
+            "朱元璋",
+            "装饰",
+            "顺治皇帝福临",
+            "没有"
+    };
+    int trueAns[] = {
+            0,
+            1,
+            0,
+            0,
+            1,
+            1
+    };
+
+    int nowAns;
+    int askYouAQuestionIdx;
+    void askYouAQuestion() {
+        if(nowRound > trueAns.length) {
+            return ;
+        }
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(gameMain);
+        builder.setTitle("答题时间");
+
+        askYouAQuestionIdx = nowRound - 1;
+        nowAns = 0;
+        builder.setMessage(question[askYouAQuestionIdx]);
+        builder.setPositiveButton(ansA[askYouAQuestionIdx], new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface arg0, int arg1) {
+                if(nowAns == trueAns[askYouAQuestionIdx]) {
+                    AlertDialog.Builder nowBuilder = new AlertDialog.Builder(gameMain);
+                    nowBuilder.setMessage("恭喜你获得神秘礼包");
+                    nowBuilder.show();
+                }
+            }
+        });
+
+        builder.setNegativeButton(ansB[askYouAQuestionIdx], new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                nowAns = 1;
+                if(nowAns == trueAns[askYouAQuestionIdx]) {
+                    AlertDialog.Builder nowBuilder = new AlertDialog.Builder(gameMain);
+                    nowBuilder.setMessage("恭喜你获得神秘礼包");
+                    nowBuilder.show();
+                }
+            }
+        });
+
+        builder.create();
+        builder.show();
+
+        fuDaiX = -1;
+        fuDaiY = -1;
+    }
 
     private CountDownTimer timer = new CountDownTimer(5000, 1000) {
         @Override
@@ -105,7 +182,7 @@ public class GameView extends View {
     boolean flag[][] = new boolean[20][20];
     boolean vis[][] = new boolean[20][20];
     boolean canSee[][] = new boolean[20][20];
-    final int totTreasure = 5;
+    int totTreasure = 5;
 
     class LocationInformation {
         int x, y;
@@ -144,11 +221,11 @@ public class GameView extends View {
     int mxStep;
     boolean judgeTimeOut;
 
-    private CountDownTimer timer2 = new CountDownTimer(100000, 1) {
+    private CountDownTimer timer2 = new CountDownTimer(240000, 1) {
         @Override
         public void onTick(long millisUntilFinished) {
-            PushBoxMain.textView.setText("                                              所剩时间：" + String.valueOf(millisUntilFinished / 1000));
-            PushBoxMain.textView2.setText("                                              所剩步数：" + String.valueOf(mxStep));
+            PushBoxMain.textView.setText(String.valueOf(millisUntilFinished / 1000) + "秒" + " " + String.valueOf(mxStep) + "步");
+            //PushBoxMain.textView2.setText();
         }
 
         @Override
@@ -170,6 +247,12 @@ public class GameView extends View {
         }
     }
 
+    boolean havAFuDai() {
+        Random random = new Random();
+        return random.nextInt(2) < 1;
+    }
+
+    int fuDaiX, fuDaiY;
     private void initMyNewMap() {
         initCanSee();
         judgeTimeOut = false;
@@ -177,6 +260,9 @@ public class GameView extends View {
 
         row = map.length;
         column = map[0].length;
+
+        fuDaiX = -1;
+        fuDaiY = -1;
 
         for(int i = 0; i < row; i++) {
             for(int j = 0; j < column; j++) {
@@ -196,6 +282,7 @@ public class GameView extends View {
             }
         }
 
+        totTreasure = nowRound + 3;
         Random rd = new Random();
         for(int i = 0; i < totTreasure; i++) {
             int idx = rd.nextInt(totRow * totColumn);
@@ -218,6 +305,15 @@ public class GameView extends View {
                 locationRecord[totTreasure].y = idx % totColumn + 1;
                 break;
             }
+        }
+
+        if(havAFuDai()) {
+            int idx = rd.nextInt(totRow * totColumn);
+            while(flag[idx / totColumn + 1][idx % totColumn + 1]) {
+                idx = rd.nextInt(totRow * totColumn);
+            }
+            fuDaiX = idx / totColumn + 1;
+            fuDaiY = idx % totColumn + 1;
         }
 
         int a[] = new int[totTreasure + 1];
@@ -299,15 +395,19 @@ public class GameView extends View {
         // TODO Auto-generated method stub
         row = map.length;
         column = map[0].length;
+
+        xoff = width / (column + 2);
+        yoff = height / (row + 2);
+
         widthPicSize = (int) Math.floor((width - 2 * xoff) / column);
-        heightPicSize = (int)Math.floor((height - 100 - 6 * yoff) / row);
+        heightPicSize = (int)Math.floor((height - 6 * yoff) / row);
 
         tem = MapList.getMap(gate);
     }
 
     private void intPic() {
         // TODO Auto-generated method stub
-        pic = new Bitmap[15];
+        pic = new Bitmap[20];
         loadPic(WALL, this.getResources().getDrawable(R.drawable.wall));
         loadPic(GOAL, this.getResources().getDrawable(R.drawable.goal));
         loadPic(ROAD, this.getResources().getDrawable(R.drawable.road));
@@ -322,6 +422,7 @@ public class GameView extends View {
         loadPic(RIGHT, this.getResources().getDrawable(R.drawable.right));
         loadPic(MUSIC, this.getResources().getDrawable(R.drawable.music));
         loadPic(TREASURE, this.getResources().getDrawable(R.drawable.treasure));
+        loadPic(FUDAI, this.getResources().getDrawable(R.drawable.fudai));
     }
 
     private void loadPic(int KEY, Drawable dw) {
@@ -343,7 +444,13 @@ public class GameView extends View {
         canvas.drawText("第" + String.valueOf(nowRound) + "关", 2 * width / 5, yoff / 2, paint);
         for (int i = 0; i < row; i++)
             for (int j = 0; j < column; j++) {
-                if (map[i][j] > 0) {
+                if(map[i][j] == WORKER) {
+                    canvas.drawBitmap(pic[WORKER], xoff + j * widthPicSize, yoff + i * heightPicSize, paint);
+                }
+                else if(i == fuDaiX && j == fuDaiY) {
+                    canvas.drawBitmap(pic[FUDAI], xoff + j * widthPicSize, yoff + i * heightPicSize, paint);
+                }
+                else if (map[i][j] > 0) {
                     if(!flag[i][j]) {
                         canvas.drawBitmap(pic[map[i][j]], xoff + j * widthPicSize, yoff + i * heightPicSize, paint);
                     }
@@ -362,11 +469,11 @@ public class GameView extends View {
             }
 
         canvas.drawBitmap(pic[BACK], xoff + widthPicSize, 2 * yoff + row * heightPicSize, paint);
-        canvas.drawBitmap(pic[UP], xoff + 2 * widthPicSize, 2 * yoff + row * heightPicSize, paint);
-        canvas.drawBitmap(pic[DOWN], xoff + 3 * widthPicSize, 2 * yoff + row * heightPicSize, paint);
-        canvas.drawBitmap(pic[LEFT], xoff + 4 * widthPicSize, 2 * yoff + row * heightPicSize, paint);
-        canvas.drawBitmap(pic[RIGHT], xoff + 5 * widthPicSize, 2 * yoff + row * heightPicSize, paint);
-        canvas.drawBitmap(pic[MUSIC], xoff + 6 * widthPicSize, 2 * yoff + row * heightPicSize, paint);
+        canvas.drawBitmap(pic[UP], xoff + 3 * widthPicSize, 2 * yoff + row * heightPicSize, paint);
+        canvas.drawBitmap(pic[DOWN], xoff + 5 * widthPicSize, 2 * yoff + row * heightPicSize, paint);
+        canvas.drawBitmap(pic[LEFT], xoff + 7 * widthPicSize, 2 * yoff + row * heightPicSize, paint);
+        canvas.drawBitmap(pic[RIGHT], xoff + 9 * widthPicSize, 2 * yoff + row * heightPicSize, paint);
+        canvas.drawBitmap(pic[MUSIC], xoff + 11 * widthPicSize, 2 * yoff + row * heightPicSize, paint);
         super.onDraw(canvas);
     }
 
@@ -456,19 +563,19 @@ public class GameView extends View {
         if (y > 2 * yoff + row * heightPicSize && y < 2 * yoff + row * heightPicSize + heightPicSize) {
             if (x > xoff + widthPicSize && x < xoff + 2 * widthPicSize) {
                 backMap();
-            } else if (x > xoff + 2 * widthPicSize && x < xoff + 3 * widthPicSize) {
+            } else if (x > xoff + 3 * widthPicSize && x < xoff + 4 * widthPicSize) {
                 moveUp();
                 mxStep--;
-            } else if (x > xoff + 3 * widthPicSize && x < xoff + 4 * widthPicSize) {
+            } else if (x > xoff + 5 * widthPicSize && x < xoff + 6 * widthPicSize) {
                 moveDown();
                 mxStep--;
-            } else if (x > xoff + 4 * widthPicSize && x < xoff + 5 * widthPicSize) {
+            } else if (x > xoff + 7 * widthPicSize && x < xoff + 8 * widthPicSize) {
                 moveLeft();
                 mxStep--;
-            } else if (x > xoff + 5 * widthPicSize && x < xoff + 6 * widthPicSize) {
+            } else if (x > xoff + 9 * widthPicSize && x < xoff + 10 * widthPicSize) {
                 moveRight();
                 mxStep--;
-            } else if (x > xoff + 6 * widthPicSize && x < xoff + 7 * widthPicSize) {
+            } else if (x > xoff + 11 * widthPicSize && x < xoff + 12 * widthPicSize) {
                 //if (!m.isPlaying()) {
                 //    m.start();//播放声音
                 //} else
@@ -510,7 +617,7 @@ public class GameView extends View {
             map = priMap.getMap();
             getManPosition();
             list.remove(list.size() - 1);
-
+            mxStep++;
         } else
             Toast.makeText(this.getContext(), "You can't back the game!", Toast.LENGTH_LONG).show();
     }
@@ -552,6 +659,7 @@ public class GameView extends View {
             AlertDialog.Builder builder = new AlertDialog.Builder(gameMain);
             if(isAllFound)builder.setTitle("恭喜你通关了");
             else  {
+                nowRound--;
                 if(judgeTimeOut) builder.setTitle("很遗憾，您已超时");
                 else builder.setTitle("很遗憾，您已超过最大的步数");
             }
@@ -630,6 +738,10 @@ public class GameView extends View {
             builder.setMessage(msgOfCulturalRelic[now.nextInt(msgOfCulturalRelic.length)]);
             builder.show();
         }*/
+
+        if(manRow == fuDaiX && manColumn == fuDaiY) {
+            askYouAQuestion();
+        }
     }
 
     private void moveUp() {
@@ -660,6 +772,10 @@ public class GameView extends View {
             builder.setMessage(msgOfCulturalRelic[now.nextInt(msgOfCulturalRelic.length)]);
             builder.show();
         }*/
+
+        if(manRow == fuDaiX && manColumn == fuDaiY) {
+            askYouAQuestion();
+        }
     }
 
     private void moveLeft() {
@@ -690,6 +806,10 @@ public class GameView extends View {
             builder.setMessage(msgOfCulturalRelic[now.nextInt(msgOfCulturalRelic.length)]);
             builder.show();
         }*/
+
+        if(manRow == fuDaiX && manColumn == fuDaiY) {
+            askYouAQuestion();
+        }
     }
 
     private void moveRight() {
@@ -720,5 +840,9 @@ public class GameView extends View {
             builder.setMessage(msgOfCulturalRelic[now.nextInt(msgOfCulturalRelic.length)]);
             builder.show();
         }*/
+
+        if(manRow == fuDaiX && manColumn == fuDaiY) {
+            askYouAQuestion();
+        }
     }
 }
