@@ -50,13 +50,14 @@ public class GameView extends View {
     private int gate = 0;
     private int manRow = 0;
     private int manColumn = 0;
-    public int picSize = 30;
+    public int widthPicSize = 30;
+    public int heightPicSize = 30;
     public int row = 0;
     public int column = 0;
     private int nowRound = 0;
-    private final int AddParameter = 100;
+    private final int AddParameter = 20;
 
-    private CountDownTimer timer = new CountDownTimer(10000, 1000) {
+    private CountDownTimer timer = new CountDownTimer(5000, 1000) {
         @Override
         public void onTick(long millisUntilFinished) {
             PushBoxMain.textView.setText((millisUntilFinished / 1000) + "秒后宝藏图标即将消失");
@@ -75,7 +76,6 @@ public class GameView extends View {
                     canSee[i][j] = false;
                 }
             }
-
             invalidate();
         }
     };
@@ -91,7 +91,7 @@ public class GameView extends View {
             int c = myMap[0].length;
             int[][] temp = new int[r][c];
             for (int i = 0; i < r; i++)
-                for (int j = 0; j < r; j++)
+                for (int j = 0; j < c; j++)
                     temp[i][j] = myMap[i][j];
             this.curMap = temp;
         }
@@ -129,28 +129,33 @@ public class GameView extends View {
                     }
         return false;
     }
+
     private void swap(int[] nums, int left, int right) {
         int temp = nums[left];
         nums[left] = nums[right];
         nums[right] = temp;
     }
+
     private void reverse(int[] nums, int left, int right) {
         while (left < right)
             swap(nums, left++, right--);
     }
 
     int mxStep;
+    boolean judgeTimeOut;
 
     private CountDownTimer timer2 = new CountDownTimer(100000, 1) {
         @Override
         public void onTick(long millisUntilFinished) {
-            PushBoxMain.textView2.setText(String.valueOf(mxStep));
+            PushBoxMain.textView.setText("                                              所剩时间：" + String.valueOf(millisUntilFinished / 1000));
+            PushBoxMain.textView2.setText("                                              所剩步数：" + String.valueOf(mxStep));
         }
 
         @Override
         public void onFinish() {
             //通过设置步数，使得超过时限后游戏结束
             mxStep = -1;
+            judgeTimeOut = true;
         }
     };
 
@@ -167,6 +172,7 @@ public class GameView extends View {
 
     private void initMyNewMap() {
         initCanSee();
+        judgeTimeOut = false;
         timer2.start();
 
         row = map.length;
@@ -293,7 +299,8 @@ public class GameView extends View {
         // TODO Auto-generated method stub
         row = map.length;
         column = map[0].length;
-        picSize = (int) Math.floor((width - 2 * xoff) / column);
+        widthPicSize = (int) Math.floor((width - 2 * xoff) / column);
+        heightPicSize = (int)Math.floor((height - 100 - 6 * yoff) / row);
 
         tem = MapList.getMap(gate);
     }
@@ -319,9 +326,9 @@ public class GameView extends View {
 
     private void loadPic(int KEY, Drawable dw) {
         // TODO Auto-generated method stub
-        Bitmap bm = Bitmap.createBitmap(picSize, picSize,
+        Bitmap bm = Bitmap.createBitmap(widthPicSize, heightPicSize,
                 Bitmap.Config.ARGB_8888);
-        dw.setBounds(0, 0, picSize, picSize);
+        dw.setBounds(0, 0, widthPicSize, heightPicSize);
         Canvas cs = new Canvas(bm);
         dw.draw(cs);
         pic[KEY] = bm;
@@ -333,35 +340,33 @@ public class GameView extends View {
         Paint paint = new Paint();
         paint.setTextSize(20f);
         paint.setColor(Color.WHITE);
-        canvas.drawText("第" + String.valueOf(gate + 1) + "关", 2 * width / 5, yoff / 2, paint);
+        canvas.drawText("第" + String.valueOf(nowRound) + "关", 2 * width / 5, yoff / 2, paint);
         for (int i = 0; i < row; i++)
             for (int j = 0; j < column; j++) {
                 if (map[i][j] > 0) {
                     if(!flag[i][j]) {
-                        canvas.drawBitmap(pic[map[i][j]], xoff + j * picSize, yoff + i * picSize, paint);
+                        canvas.drawBitmap(pic[map[i][j]], xoff + j * widthPicSize, yoff + i * heightPicSize, paint);
                     }
                     else {
                         if(canSee[i][j]) {
-                            canvas.drawBitmap(pic[13], xoff + j * picSize, yoff + i * picSize, paint);
+                            canvas.drawBitmap(pic[13], xoff + j * widthPicSize, yoff + i * heightPicSize, paint);
                         } else if(!vis[i][j]) {
-                            canvas.drawBitmap(pic[map[i][j]], xoff + j * picSize, yoff + i * picSize, paint);
+                            canvas.drawBitmap(pic[map[i][j]], xoff + j * widthPicSize, yoff + i * heightPicSize, paint);
                         } else if(map[i][j] != WORKER){
-                            canvas.drawBitmap(pic[GOAL], xoff + j * picSize, yoff + i * picSize, paint);
+                            canvas.drawBitmap(pic[GOAL], xoff + j * widthPicSize, yoff + i * heightPicSize, paint);
                         } else {
-                            canvas.drawBitmap(pic[WORKER], xoff + j * picSize, yoff + i * picSize, paint);
+                            canvas.drawBitmap(pic[WORKER], xoff + j * widthPicSize, yoff + i * heightPicSize, paint);
                         }
                     }
                 }
             }
 
-        canvas.drawBitmap(pic[BACK], xoff + picSize, 2 * yoff + row * picSize, paint);
-        canvas.drawBitmap(pic[UP], xoff + 2 * picSize, 2 * yoff + row * picSize, paint);
-        canvas.drawBitmap(pic[DOWN], xoff + 3 * picSize, 2 * yoff + row * picSize, paint);
-        canvas.drawBitmap(pic[LEFT], xoff + 4 * picSize, 2 * yoff + row * picSize, paint);
-        canvas.drawBitmap(pic[RIGHT], xoff + 5 * picSize, 2 * yoff + row * picSize, paint);
-        canvas.drawBitmap(pic[MUSIC], xoff + 6 * picSize, 2 * yoff + row * picSize, paint);
-
-
+        canvas.drawBitmap(pic[BACK], xoff + widthPicSize, 2 * yoff + row * heightPicSize, paint);
+        canvas.drawBitmap(pic[UP], xoff + 2 * widthPicSize, 2 * yoff + row * heightPicSize, paint);
+        canvas.drawBitmap(pic[DOWN], xoff + 3 * widthPicSize, 2 * yoff + row * heightPicSize, paint);
+        canvas.drawBitmap(pic[LEFT], xoff + 4 * widthPicSize, 2 * yoff + row * heightPicSize, paint);
+        canvas.drawBitmap(pic[RIGHT], xoff + 5 * widthPicSize, 2 * yoff + row * heightPicSize, paint);
+        canvas.drawBitmap(pic[MUSIC], xoff + 6 * widthPicSize, 2 * yoff + row * heightPicSize, paint);
         super.onDraw(canvas);
     }
 
@@ -448,22 +453,22 @@ public class GameView extends View {
         y = event.getY();
 
         //在图标点触
-        if (y > 2 * yoff + row * picSize && y < 2 * yoff + row * picSize + picSize) {
-            if (x > xoff + picSize && x < xoff + 2 * picSize) {
+        if (y > 2 * yoff + row * heightPicSize && y < 2 * yoff + row * heightPicSize + heightPicSize) {
+            if (x > xoff + widthPicSize && x < xoff + 2 * widthPicSize) {
                 backMap();
-            } else if (x > xoff + 2 * picSize && x < xoff + 3 * picSize) {
+            } else if (x > xoff + 2 * widthPicSize && x < xoff + 3 * widthPicSize) {
                 moveUp();
                 mxStep--;
-            } else if (x > xoff + 3 * picSize && x < xoff + 4 * picSize) {
+            } else if (x > xoff + 3 * widthPicSize && x < xoff + 4 * widthPicSize) {
                 moveDown();
                 mxStep--;
-            } else if (x > xoff + 4 * picSize && x < xoff + 5 * picSize) {
+            } else if (x > xoff + 4 * widthPicSize && x < xoff + 5 * widthPicSize) {
                 moveLeft();
                 mxStep--;
-            } else if (x > xoff + 5 * picSize && x < xoff + 6 * picSize) {
+            } else if (x > xoff + 5 * widthPicSize && x < xoff + 6 * widthPicSize) {
                 moveRight();
                 mxStep--;
-            } else if (x > xoff + 6 * picSize && x < xoff + 7 * picSize) {
+            } else if (x > xoff + 6 * widthPicSize && x < xoff + 7 * widthPicSize) {
                 //if (!m.isPlaying()) {
                 //    m.start();//播放声音
                 //} else
@@ -472,19 +477,19 @@ public class GameView extends View {
             }
         } else {
             //在图中点触
-            if (x > xoff + manColumn * picSize && x < xoff + manColumn * picSize + picSize) {
-                if (y < yoff + manRow * picSize)
+            if (x > xoff + manColumn * widthPicSize && x < xoff + manColumn * widthPicSize + widthPicSize) {
+                if (y < yoff + manRow * heightPicSize)
                     moveUp();
 
-                else if (y > yoff + manRow * picSize + picSize)
+                else if (y > yoff + manRow * heightPicSize + heightPicSize)
                     moveDown();
 
                 --mxStep;
-            } else if (y > yoff + manRow * picSize && y < yoff + manRow * picSize + picSize) {
-                if (x < xoff + manColumn * picSize)
+            } else if (y > yoff + manRow * heightPicSize && y < yoff + manRow * heightPicSize + heightPicSize) {
+                if (x < xoff + manColumn * widthPicSize)
                     moveLeft();
 
-                if (x > xoff + manColumn * picSize + picSize)
+                if (x > xoff + manColumn * widthPicSize + widthPicSize)
                     moveRight();
 
                 --mxStep;
@@ -546,7 +551,10 @@ public class GameView extends View {
         if (MapList.getCount() == gate + 1) {
             AlertDialog.Builder builder = new AlertDialog.Builder(gameMain);
             if(isAllFound)builder.setTitle("恭喜你通关了");
-            else builder.setTitle("很遗憾，您已超过最大的步数");
+            else  {
+                if(judgeTimeOut) builder.setTitle("很遗憾，您已超时");
+                else builder.setTitle("很遗憾，您已超过最大的步数");
+            }
             builder.setMessage("开始新一关的游戏还是退出?");
             builder.setPositiveButton("新一关", new DialogInterface.OnClickListener() {
 

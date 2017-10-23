@@ -1,15 +1,23 @@
 [
     {
-        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\music.png",
-        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\music.png"
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\up.png",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\up.png"
     },
     {
-        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\right.png",
-        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\right.png"
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down.png",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\down.png"
     },
     {
-        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bg.jpg",
-        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\bg.jpg"
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\music.png",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\music.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\base.png",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\base.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\man.png",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\man.png"
     },
     {
         "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\goal.png",
@@ -20,36 +28,68 @@
         "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\box.png"
     },
     {
-        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\exit.png",
-        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\exit.png"
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down.png",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\down.png"
     },
     {
-        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\up.png",
-        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\up.png"
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\beijing.jpg",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\beijing.jpg"
     },
     {
-        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\man.png",
-        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\man.png"
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\right.png",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\right.png"
     },
     {
-        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\gugong.jpg",
-        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\gugong.jpg"
+        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\man2.png",
+        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\man2.png"
     },
     {
-        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\beijing.jpg",
-        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\beijing.jpg"
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\gugong.jpg",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\gugong.jpg"
     },
     {
-        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\box_at_goal.png",
-        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\box_at_goal.png"
+        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\music.png",
+        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\music.png"
     },
     {
-        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wall.png",
-        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\wall.png"
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\right.png",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\right.png"
     },
     {
-        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\begin.png",
-        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\begin.png"
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\left.png",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\left.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\begin1.png",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\begin1.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\man.png",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\man.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\exit2.png",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\exit2.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\road.png",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\road.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\treasure.png",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\treasure.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\left.png",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\left.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\beijing.jpg",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\beijing.jpg"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\begin.png",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\begin.png"
     },
     {
         "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down.png",
@@ -60,19 +100,151 @@
         "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\left.png"
     },
     {
-        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\road.png",
-        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\road.png"
+        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\right.png",
+        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\right.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bg.jpg",
+        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\bg.jpg"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\back.png",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\back.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\box_at_goal.png",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\box_at_goal.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bg.jpg",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\bg.jpg"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\exit2.png",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\exit2.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\man.png",
+        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\man.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\gugong.jpg",
+        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\gugong.jpg"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\back.png",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\back.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\box_at_goal.png",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\box_at_goal.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\road.png",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\road.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\begin.png",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\begin.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\begin1.png",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\begin1.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\box.png",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\box.png"
     },
     {
         "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\back.png",
         "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\back.png"
     },
     {
-        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\man2.png",
-        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\man2.png"
+        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\road.png",
+        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\road.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bg.jpg",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\bg.jpg"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\man2.png",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\man2.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\box.png",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\box.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wall.png",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\wall.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\exit.png",
+        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\exit.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\up.png",
+        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\up.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\goal.png",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\goal.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\exit.png",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\exit.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\man2.png",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\man2.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\beijing.jpg",
+        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\beijing.jpg"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\gugong.jpg",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\gugong.jpg"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\box_at_goal.png",
+        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\box_at_goal.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\exit.png",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\exit.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wall.png",
+        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\wall.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\begin.png",
+        "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\begin.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wall.png",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\wall.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\goal.png",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\goal.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest6\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\up.png",
+        "source": "H:\\code\\test\\PushBoxTest6\\app\\src\\main\\res\\drawable\\up.png"
     },
     {
         "merged": "H:\\code\\test\\PushBoxTest5\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\treasure.png",
         "source": "H:\\code\\test\\PushBoxTest5\\app\\src\\main\\res\\drawable\\treasure.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\treasure.png",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\treasure.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\music.png",
+        "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable\\music.png"
     }
 ]

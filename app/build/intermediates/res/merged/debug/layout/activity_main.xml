@@ -8,16 +8,16 @@
     android:layout_height="480dp"
     android:focusable="true"
     android:layout_weight="0.85"
-    android:background="@drawable/beijing"/>
+    android:background="@drawable/base"/>
 
     <TextView
-        android:layout_width="191dp"
+        android:layout_width="343dp"
         android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/textView" />
 
     <TextView
-        android:layout_width="193dp"
+        android:layout_width="354dp"
         android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/textView2" />
