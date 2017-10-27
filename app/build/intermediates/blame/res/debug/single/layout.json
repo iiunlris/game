@@ -1,11 +1,27 @@
 [
     {
+        "merged": "H:\\code\\test\\PushBoxTest10\\app\\build\\intermediates\\res\\merged\\debug\\layout\\begin.xml",
+        "source": "H:\\code\\test\\PushBoxTest10\\app\\src\\main\\res\\layout\\begin.xml"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest9\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "H:\\code\\test\\PushBoxTest9\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
         "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
         "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "H:\\code\\test\\PushBoxTest10\\app\\build\\intermediates\\res\\merged\\debug\\layout\\menu.xml",
+        "source": "H:\\code\\test\\PushBoxTest10\\app\\src\\main\\res\\layout\\menu.xml"
+    },
+    {
         "merged": "H:\\code\\test\\PushBoxTest8\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
         "source": "H:\\code\\test\\PushBoxTest8\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest10\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "H:\\code\\test\\PushBoxTest10\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\layout\\begin.xml",
@@ -14,5 +30,17 @@
     {
         "merged": "H:\\code\\test\\PushBoxTest8\\app\\build\\intermediates\\res\\merged\\debug\\layout\\begin.xml",
         "source": "H:\\code\\test\\PushBoxTest8\\app\\src\\main\\res\\layout\\begin.xml"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest8\\app\\build\\intermediates\\res\\merged\\debug\\layout\\menu.xml",
+        "source": "H:\\code\\test\\PushBoxTest8\\app\\src\\main\\res\\layout\\menu.xml"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest9\\app\\build\\intermediates\\res\\merged\\debug\\layout\\begin.xml",
+        "source": "H:\\code\\test\\PushBoxTest9\\app\\src\\main\\res\\layout\\begin.xml"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest9\\app\\build\\intermediates\\res\\merged\\debug\\layout\\menu.xml",
+        "source": "H:\\code\\test\\PushBoxTest9\\app\\src\\main\\res\\layout\\menu.xml"
     }
 ]

@@ -4,6 +4,18 @@
         "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\raw\\bgm.mp3"
     },
     {
+        "merged": "H:\\code\\test\\PushBoxTest10\\app\\build\\intermediates\\res\\merged\\debug\\raw\\bgm.mp3",
+        "source": "H:\\code\\test\\PushBoxTest10\\app\\src\\main\\res\\raw\\bgm.mp3"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest10\\app\\build\\intermediates\\res\\merged\\debug\\raw\\dingdong.ogg",
+        "source": "H:\\code\\test\\PushBoxTest10\\app\\src\\main\\res\\raw\\dingdong.ogg"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest9\\app\\build\\intermediates\\res\\merged\\debug\\raw\\jimi.mp3",
+        "source": "H:\\code\\test\\PushBoxTest9\\app\\src\\main\\res\\raw\\jimi.mp3"
+    },
+    {
         "merged": "H:\\code\\test\\PushBoxTest8\\app\\build\\intermediates\\res\\merged\\debug\\raw\\jimi.mp3",
         "source": "H:\\code\\test\\PushBoxTest8\\app\\src\\main\\res\\raw\\jimi.mp3"
     },
@@ -16,11 +28,23 @@
         "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\raw\\jimi.mp3"
     },
     {
+        "merged": "H:\\code\\test\\PushBoxTest9\\app\\build\\intermediates\\res\\merged\\debug\\raw\\dingdong.ogg",
+        "source": "H:\\code\\test\\PushBoxTest9\\app\\src\\main\\res\\raw\\dingdong.ogg"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest10\\app\\build\\intermediates\\res\\merged\\debug\\raw\\jimi.mp3",
+        "source": "H:\\code\\test\\PushBoxTest10\\app\\src\\main\\res\\raw\\jimi.mp3"
+    },
+    {
         "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\raw\\dingdong.ogg",
         "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\raw\\dingdong.ogg"
     },
     {
         "merged": "H:\\code\\test\\PushBoxTest8\\app\\build\\intermediates\\res\\merged\\debug\\raw\\bgm.mp3",
         "source": "H:\\code\\test\\PushBoxTest8\\app\\src\\main\\res\\raw\\bgm.mp3"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest9\\app\\build\\intermediates\\res\\merged\\debug\\raw\\bgm.mp3",
+        "source": "H:\\code\\test\\PushBoxTest9\\app\\src\\main\\res\\raw\\bgm.mp3"
     }
 ]

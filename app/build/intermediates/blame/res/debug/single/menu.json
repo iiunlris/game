@@ -4,6 +4,14 @@
         "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\menu\\main.xml"
     },
     {
+        "merged": "H:\\code\\test\\PushBoxTest10\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "H:\\code\\test\\PushBoxTest10\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest9\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "H:\\code\\test\\PushBoxTest9\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
         "merged": "H:\\code\\test\\PushBoxTest8\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
         "source": "H:\\code\\test\\PushBoxTest8\\app\\src\\main\\res\\menu\\main.xml"
     }

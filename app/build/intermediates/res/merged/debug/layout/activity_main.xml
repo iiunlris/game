@@ -20,6 +20,5 @@
         android:textSize="30dp"
         android:gravity="center"
         android:layout_gravity="center_horizontal" />;
-        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>

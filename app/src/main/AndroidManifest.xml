@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.pushboxtest.PushBoxMain" />
+        <activity android:name="com.example.pushboxtest.Menu" />
     </application>
 
 </manifest>

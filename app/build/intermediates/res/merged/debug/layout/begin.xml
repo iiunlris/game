@@ -21,7 +21,8 @@
         android:src="@drawable/exit2"
         android:layout_alignTop="@+id/begin"
         android:layout_alignRight="@+id/tv"
-        android:layout_alignEnd="@+id/tv" />
+        android:layout_alignEnd="@+id/tv"
+        android:background="#00000000"/>
 
     <ImageButton
         android:id="@+id/begin"
@@ -32,6 +33,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/tv"
         android:layout_alignStart="@+id/tv"
-        android:layout_marginBottom="133dp" />
+        android:layout_marginBottom="133dp"
+        android:background="#00000000"/>
 
 </RelativeLayout>

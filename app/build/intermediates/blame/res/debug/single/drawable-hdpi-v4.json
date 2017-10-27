@@ -1,10 +1,18 @@
 [
     {
+        "merged": "H:\\code\\test\\PushBoxTest9\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "H:\\code\\test\\PushBoxTest9\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
         "merged": "H:\\code\\test\\PushBoxTest8\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
         "source": "H:\\code\\test\\PushBoxTest8\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
     },
     {
         "merged": "H:\\code\\test\\PushBoxTest7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
         "source": "H:\\code\\test\\PushBoxTest7\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "H:\\code\\test\\PushBoxTest10\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "H:\\code\\test\\PushBoxTest10\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
     }
 ]

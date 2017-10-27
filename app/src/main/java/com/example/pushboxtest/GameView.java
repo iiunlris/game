@@ -56,7 +56,7 @@ public class GameView extends View {
     public int row = 0;
     public int column = 0;
     private int nowRound = 0;
-    private final int AddParameter = 20;
+    private final int AddParameter = 10;
 
     String question[] = {
             "坤宁宫每天杀猪是真的吗",
@@ -107,11 +107,13 @@ public class GameView extends View {
         builder.setPositiveButton(ansA[askYouAQuestionIdx], new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface arg0, int arg1) {
+                AlertDialog.Builder nowBuilder = new AlertDialog.Builder(gameMain);
                 if(nowAns == trueAns[askYouAQuestionIdx]) {
-                    AlertDialog.Builder nowBuilder = new AlertDialog.Builder(gameMain);
                     nowBuilder.setMessage("恭喜你获得神秘礼包");
-                    nowBuilder.show();
+                } else {
+                    nowBuilder.setMessage("很遗憾，功力尚需修炼");
                 }
+                nowBuilder.show();
             }
         });
 
@@ -119,11 +121,13 @@ public class GameView extends View {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 nowAns = 1;
+                AlertDialog.Builder nowBuilder = new AlertDialog.Builder(gameMain);
                 if(nowAns == trueAns[askYouAQuestionIdx]) {
-                    AlertDialog.Builder nowBuilder = new AlertDialog.Builder(gameMain);
                     nowBuilder.setMessage("恭喜你获得神秘礼包");
-                    nowBuilder.show();
+                } else {
+                    nowBuilder.setMessage("很遗憾，功力尚需修炼");
                 }
+                nowBuilder.show();
             }
         });
 
@@ -134,16 +138,19 @@ public class GameView extends View {
         fuDaiY = -1;
     }
 
+    boolean showTimer = false;
     private CountDownTimer timer = new CountDownTimer(5000, 1000) {
         @Override
         public void onTick(long millisUntilFinished) {
+            showTimer = true;
             PushBoxMain.textView.setText((millisUntilFinished / 1000) + "秒后宝藏图标即将消失");
         }
 
         @Override
         public void onFinish() {
+            showTimer = false;
             PushBoxMain.textView.setEnabled(true);
-            PushBoxMain.textView.setText("游戏开始");
+            //PushBoxMain.textView.setText("游戏开始");
 
             row = map.length;
             column = map[0].length;
@@ -221,10 +228,13 @@ public class GameView extends View {
     int mxStep;
     boolean judgeTimeOut;
 
-    private CountDownTimer timer2 = new CountDownTimer(240000, 1) {
+    private CountDownTimer timer2 = new CountDownTimer(200000, 200) {
         @Override
         public void onTick(long millisUntilFinished) {
-            PushBoxMain.textView.setText(String.valueOf(millisUntilFinished / 1000) + "秒" + " " + String.valueOf(mxStep) + "步");
+            if(mxStep >= 0) {
+                if(!showTimer)
+                    PushBoxMain.textView.setText(String.valueOf(millisUntilFinished / 1000) + "秒" + " " + String.valueOf(mxStep) + "步");
+            }
             //PushBoxMain.textView2.setText();
         }
 
@@ -254,6 +264,8 @@ public class GameView extends View {
 
     int fuDaiX, fuDaiY;
     private void initMyNewMap() {
+        showTimer = false;
+
         initCanSee();
         judgeTimeOut = false;
         timer2.start();
@@ -324,8 +336,8 @@ public class GameView extends View {
         do {
             int nowStep = 0;
             for(int i = 0; i < totTreasure; i++) {
-                nowStep += Math.abs(locationRecord[a[i]].x - locationRecord[a[i] + 1].x)
-                        + Math.abs(locationRecord[a[i]].y - locationRecord[a[i] + 1].y);
+                nowStep += Math.abs(locationRecord[a[i]].x - locationRecord[a[i + 1]].x)
+                        + Math.abs(locationRecord[a[i]].y - locationRecord[a[i + 1]].y);
             }
             mxStep = Math.min(nowStep, mxStep);
         }while(nextPermutation(a, 0, totTreasure));
@@ -364,7 +376,10 @@ public class GameView extends View {
         //m1 = MediaPlayer.create(this.getContext(), R.raw.dingdong );
     }
 
+    int mxTimeCanSee = 0;
     private void intMap() {
+        mxTimeCanSee = 0;
+
         // TODO Auto-generated method stub
         map = MapList.getMap(gate);
 
@@ -447,7 +462,7 @@ public class GameView extends View {
                 if(map[i][j] == WORKER) {
                     canvas.drawBitmap(pic[WORKER], xoff + j * widthPicSize, yoff + i * heightPicSize, paint);
                 }
-                else if(i == fuDaiX && j == fuDaiY) {
+                else if(i == fuDaiX && j == fuDaiY && canSee[i][j]) {
                     canvas.drawBitmap(pic[FUDAI], xoff + j * widthPicSize, yoff + i * heightPicSize, paint);
                 }
                 else if (map[i][j] > 0) {
@@ -580,7 +595,8 @@ public class GameView extends View {
                 //    m.start();//播放声音
                 //} else
                 //    m.pause();
-                initCanSee();
+                if(mxTimeCanSee++ < 3)
+                    initCanSee();
             }
         } else {
             //在图中点触
